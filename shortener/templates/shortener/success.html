@@ -1,0 +1,26 @@
+{% extends "shortener/base.html" %}
+
+{% block title %}
+{{ object.shortcode }}
+{% endblock title %}
+
+{% block content %}
+<div class="row">
+  <div class="s1 m3 l4"></div>
+  <div class="s10 m6 l4">
+    <div class="card z-depth-2">
+      <div class="card-content center">
+        <h2>Success!</h2>
+        <div class="collection">
+          <a href="#!" class="collection-item">{{ object.url }}</a>
+          <a href="{{ object.get_short_url }}" class="collection-item active pink">{{ object.get_short_url }}</a>
+        </div>
+        <div class="card-action">
+          <a class="btn btn-default" href="/">+ New</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="s1 m3 l4"></div>
+</div>
+{% endblock content %}
